@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- v15: Self-contained portfolio page. Person button and Back-to-top controls use scrollTo(0,0) for direct-file and GitHub Pages reliability. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abubaker Alattas - Cybersecurity Governance, Risk and Compliance portfolio." />
+  <meta name="author" content="Abubaker Alattas" />
+  <title>Abubaker Alattas | Cybersecurity Governance, Risk & Compliance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root{--bg:#06111f;--card:rgba(255,255,255,.07);--text:#f4f8ff;--muted:#aebbd1;--line:rgba(255,255,255,.12);--accent:#93c5fd;--accent2:#3b82f6;--gold:#ffd166;--shadow:0 28px 90px rgba(0,0,0,.3);--radius:28px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,rgba(96,165,250,.18),transparent 34rem),radial-gradient(circle at 82% 18%,rgba(96,165,250,.16),transparent 32rem),linear-gradient(180deg,#06111f,#081426 45%,#040914);color:var(--text);line-height:1.7;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 82%);pointer-events:none;z-index:-2}.container{width:min(1120px,calc(100% - 40px));margin:auto}.section{padding:88px 0}.muted{background:rgba(255,255,255,.027);border-block:1px solid rgba(255,255,255,.07)}.site-header{position:sticky;top:0;z-index:50;background:rgba(6,17,31,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{display:flex;justify-content:space-between;align-items:center;padding:13px 0;gap:22px}.home-link{width:42px;height:42px;display:inline-grid;place-items:center;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.055);color:var(--accent);text-decoration:none;transition:.2s;flex:0 0 auto}.home-link:hover{transform:translateY(-2px);background:rgba(147,197,253,.12);border-color:rgba(147,197,253,.35)}.home-link svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--text)}.brand-mark{width:42px;height:42px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06111f;font-weight:900;box-shadow:0 14px 34px rgba(96,165,250,.22)}.brand span:last-child{display:grid;line-height:1.1}.brand small{color:var(--muted);font-size:11px;font-weight:600}.nav-links{display:flex;gap:22px;align-items:center;margin-left:auto}.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:700;transition:.2s}.nav-links a:hover{color:var(--accent)}.menu-toggle{display:none;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:14px;padding:8px 12px;font-size:20px}.hero{padding-top:74px;padding-bottom:82px;min-height:calc(100vh - 69px);display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}.eyebrow,.mono{font-family:"JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);font-size:12px;font-weight:800;margin:0 0 14px}h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.045em}h1{font-size:clamp(40px,5.8vw,66px);max-width:780px}h2{font-size:clamp(30px,4vw,48px)}h3{font-size:22px}p{color:var(--muted)}.hero-text{font-size:18px;max-width:700px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.hero-actions.center{justify-content:center}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 20px;font-weight:900;text-decoration:none;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06111f;box-shadow:0 18px 42px rgba(96,165,250,.18)}.btn.ghost{border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.045)}.profile-card{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);min-height:0;display:block}.profile-card:after{content:none}.glow-orb{display:none}.profile-top{position:relative;display:flex;justify-content:space-between;gap:18px;align-items:flex-start;z-index:1}.profile-top h2{font-size:34px}.icon-box{display:none}.profile-summary{position:relative;z-index:1;margin:20px 0 0}.profile-stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.profile-stats article{border:1px solid rgba(255,255,255,.10);background:rgba(3,10,21,.58);border-radius:20px;padding:18px;min-height:118px;display:flex;flex-direction:column;justify-content:center}.profile-stats strong{font-size:34px;line-height:1;color:#bfdbfe;letter-spacing:-.05em}.profile-stats span{font-size:13px;line-height:1.5;color:#d5e1f4;font-weight:700;margin-top:10px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tags span{display:inline-flex;border:1px solid rgba(96,165,250,.22);background:rgba(96,165,250,.11);color:#dbeafe;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800}.compact-tags{position:relative;z-index:1;margin-top:20px}.highlight-grid,.cert-grid,.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.highlight-card,.timeline-card,.cert-card,.project-card,.skill-card,.cv-box,.contact-card{border:1px solid var(--line);background:var(--card);border-radius:24px;box-shadow:0 18px 50px rgba(0,0,0,.13)}.highlight-card,.cert-card,.skill-card{padding:24px}.card-icon{color:var(--accent);font-size:30px}.highlight-card p,.cert-card p,.project-card span,.skill-card p{font-size:14px}.section-heading{text-align:center;max-width:800px;margin:0 auto 40px}.section-heading p:last-child{font-size:17px}.timeline{position:relative;display:grid;gap:22px}.timeline:before{content:"";position:absolute;left:12px;top:12px;bottom:12px;width:2px;background:linear-gradient(var(--accent),transparent)}.timeline-item{position:relative;padding-left:42px}.dot{position:absolute;left:3px;top:28px;width:20px;height:20px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 6px rgba(96,165,250,.13)}.timeline-card{padding:25px}.role-head{display:flex;justify-content:space-between;gap:24px}.role-head p{color:var(--accent2);font-weight:800;margin:8px 0 0}.role-head span,.cert-card span,.project-card p{font-family:"JetBrains Mono",monospace;color:var(--gold);font-weight:900;font-size:13px;white-space:nowrap}ul{padding-left:20px;color:var(--muted);margin-bottom:0}li{margin:7px 0}.cert-grid{grid-template-columns:repeat(3,1fr)}.cert-card{min-height:180px}.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project-card{padding:26px}.project-card p{margin:0 0 12px}.cv-box{display:flex;justify-content:space-between;gap:28px;align-items:center;padding:34px}.cv-box p{max-width:740px}.contact-card{text-align:center;max-width:880px;margin:auto;padding:50px}.footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:18px}.footer a{color:var(--text);text-decoration:none}.reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}.js-ready .reveal{opacity:0;transform:translateY(20px)}.js-ready .reveal.visible{opacity:1;transform:translateY(0)}.delay-1{transition-delay:.12s}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}@media(max-width:980px){.hero{min-height:auto}.hero-grid{grid-template-columns:1fr}.highlight-grid,.skills-grid,.cert-grid{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:1fr}.role-head{flex-direction:column;gap:8px}.cv-box{flex-direction:column;align-items:flex-start}}@media(max-width:720px){.container{width:min(100% - 26px,1120px)}.section{padding:68px 0}.menu-toggle{display:inline-flex}.nav-links{position:absolute;left:13px;right:13px;top:70px;padding:16px;display:none;flex-direction:column;align-items:stretch;background:rgba(6,17,31,.96);border:1px solid var(--line);border-radius:20px}.nav-links.open{display:flex}.highlight-grid,.skills-grid,.cert-grid,.profile-stats{grid-template-columns:1fr}.hero{padding-top:58px}.profile-card{padding:24px}.contact-card{padding:30px 20px}.footer-inner{flex-direction:column}.brand small{display:none}}
+
+/* v7 refinements */
+.section-heading p + p{margin-top:14px}.role-points{list-style:disc;padding-left:22px}.role-points li::marker{color:var(--accent)}
+
+
+/* v11 spacing, width, and navigation refinements */
+.container{width:min(1160px,calc(100% - 48px));}
+.nav{justify-content:center;padding:15px 0;min-height:62px;}
+.nav-links{gap:28px;justify-content:center;flex-wrap:wrap;}
+.nav-links a{font-size:13.5px;letter-spacing:.01em;}
+.section{padding:84px 0;}
+.hero{padding-top:70px;padding-bottom:78px;min-height:calc(100vh - 62px);}
+.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:52px;}
+.hero-text{max-width:760px;}
+.profile-card{padding:34px;}
+.profile-stats{gap:16px;}
+.section-heading{max-width:900px;margin-bottom:44px;}
+.section-heading p{max-width:860px;margin-left:auto;margin-right:auto;}
+.highlight-grid,.skills-grid{gap:18px;}
+.timeline{gap:24px;}
+.timeline-card{padding:28px;}
+.role-points{margin-top:18px;}
+.role-points li{padding-left:2px;}
+.project-grid{gap:18px;}
+.cv-box{display:flex;justify-content:space-between;align-items:center;gap:36px;padding:38px 42px;min-height:190px;}
+.cv-box>div{max-width:720px;}
+.cv-box h2{margin-top:0;}
+.contact-card{max-width:900px;padding:52px 42px;}
+.footer{padding:26px 0;}
+.footer-inner{align-items:center;}
+.footer a.top-link{font-weight:800;color:var(--accent);}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:36px}.cv-box{align-items:flex-start}.nav{justify-content:space-between}.nav-links{gap:18px}.container{width:min(100% - 36px,1160px)}}
+@media(max-width:720px){.container{width:min(100% - 28px,1160px)}.nav{justify-content:space-between}.section{padding:66px 0}.hero{padding-top:56px;padding-bottom:64px}.cv-box{padding:30px 24px;min-height:auto}.contact-card{padding:34px 22px}.nav-links{top:64px}.footer-inner{gap:8px}}
+
+
+/* v12 self-contained and fail-safe refinements */
+html{scroll-padding-top:80px;}
+body.js-ready .reveal{opacity:0;transform:translateY(18px);}
+body.js-ready .reveal.visible{opacity:1;transform:translateY(0);}
+.site-header{min-height:62px;}
+.nav{max-width:1160px;}
+@media(max-width:720px){.menu-toggle{margin-left:auto}.nav{justify-content:space-between}}
+
+  </style>
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="home-link top-link" href="#home" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Career</a>
+        <a href="#certifications">Credentials</a>
+        <a href="#projects">Impact</a>
+        <a href="#skills">Expertise</a>
+        <a href="#cv">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Cybersecurity Governance • Risk • Compliance</p>
+          <h1>Abubaker Alattas</h1>
+          <p class="hero-text">10+ years of progressive experience across IT, network security, governance, risk, compliance, vulnerability management, and regulatory alignment. I bridge cybersecurity governance by translating frameworks such as SAMA CSF and NCA ECC into practical controls, measurable risk reduction, and executive security outcomes.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://www.linkedin.com/in/ibakerattas" target="_blank" rel="noopener">LinkedIn Profile</a>
+            <a class="btn ghost" href="#cv">View Resume</a>
+          </div>
+        </div>
+
+        <aside class="profile-card reveal delay-1" aria-label="Professional snapshot">
+          <div class="profile-top">
+            <div>
+              <p class="mono">professional.identity</p>
+              <h2>Cybersecurity Senior Specialist</h2>
+            </div>
+          </div>
+          <p class="profile-summary">Governance clarity, regulatory confidence, risk reduction, and business-aligned security leadership.</p>
+          <div class="profile-stats">
+            <article><strong>10+</strong><span>Years in IT & Cybersecurity</span></article>
+            <article><strong>5</strong><span>Career Progression Stages</span></article>
+            <article><strong>5+</strong><span>Regulatory Frameworks</span></article>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>Cybersecurity leader with technical roots and governance altitude.</h2>
+          <p>My career started in IT support, grew into infrastructure and network security, then expanded into cybersecurity governance, regulatory compliance, risk management, and executive reporting. That journey gives me a practical view of cybersecurity: I understand the control, the risk, the evidence, the audit question, and the business decision behind it.</p>
+          <p>I specialize in building practical cybersecurity programs aligned with Saudi regulatory expectations and security principles. My focus areas include SAMA CSF, NCA ECC, risk treatment, vulnerability management, policy enhancement, audit readiness, and awareness programs.</p>
+        </div>
+        <div class="highlight-grid">
+          <article class="highlight-card reveal"><div class="card-icon">▣</div><h3>Cybersecurity Governance</h3><p>Policies, charters, committees, compliance evidence, control ownership, and security programs aligned with regulated-sector expectations.</p></article>
+          <article class="highlight-card reveal"><div class="card-icon">▤</div><h3>Risk & Assurance</h3><p>Cyber risk tracking, gap assessments, audit readiness, evidence packs, VAPT remediation, and executive reporting.</p></article>
+          <article class="highlight-card reveal"><div class="card-icon">◈</div><h3>Technical &amp; Security Foundation</h3><p>Hands-on background in connecting governance to network security, endpoint security, patching, firewalls, system hardening, and secure architecture.</p></article>
+          <article class="highlight-card reveal"><div class="card-icon">◎</div><h3>Regulatory Alignment</h3><p>Practical alignment with SAMA CSF, NCA ECC, PDPL, Insurance Authority expectations, and control mapping.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Career</p>
+          <h2>Professional Experience</h2>
+          <p>A progression from IT support and infrastructure into security engineering, cybersecurity leadership, governance, risk, compliance, and audit readiness.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="dot"></span>
+            <div class="timeline-card">
+              <div class="role-head">
+                <div>
+                  <h3>Cybersecurity Senior Specialist</h3>
+                  <p>Arabia Insurance Cooperative Company</p>
+                </div>
+                <span>Jul 2025 - Present</span>
+              </div>
+              <ul class="role-points">
+                <li>Leading cybersecurity governance, risk, compliance, vulnerability management, technical security governance, and regulatory readiness across a Saudi insurance environment.</li>
+                <li>Manage cybersecurity controls, endpoint protection governance, firewall security reviews, vulnerability tracking, and risk-based remediation activities.</li>
+                <li>Align policies, procedures, and control evidence with SAMA CSF, NCA ECC, PDPL, and Insurance Authority requirements.</li>
+                <li>Coordinate gap assessments, audit requests, VAPT remediation, executive reporting, and cross-functional evidence collection.</li>
+                <li>Support awareness, regulatory submissions, and third-party cybersecurity governance.</li>
+              </ul>
+              <div class="tags compact-tags"><span>SAMA CSF</span><span>NCA ECC</span><span>PDPL</span><span>VAPT</span><span>GRC</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="dot"></span>
+            <div class="timeline-card">
+              <div class="role-head">
+                <div>
+                  <h3>Cybersecurity Supervisor</h3>
+                  <p>Mutakamela Insurance Company, formerly Allianz Saudi Fransi</p>
+                </div>
+                <span>Jul 2024 - Jul 2025</span>
+              </div>
+              <ul class="role-points">
+                <li>Supervised cybersecurity and data management activities while supporting strategic initiatives, regulatory compliance, and operational continuity.</li>
+                <li>Served as interim Cybersecurity and Data Management Manager during a leadership transition.</li>
+                <li>Led cybersecurity framework adoption, regulatory compliance activities, awareness programs, and executive risk reporting.</li>
+                <li>Managed remediation strategies, risk assessments, and audit evidence preparation.</li>
+              </ul>
+              <div class="tags compact-tags"><span>Leadership</span><span>Risk</span><span>Compliance</span><span>Awareness</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="dot"></span>
+            <div class="timeline-card">
+              <div class="role-head">
+                <div>
+                  <h3>Network &amp; Security Engineer</h3>
+                  <p>Allianz Saudi Fransi Cooperative Insurance Company</p>
+                </div>
+                <span>Jan 2022 - Jun 2024</span>
+              </div>
+              <ul class="role-points">
+                <li>Designed and maintained secure infrastructure across networks, firewalls, VPN, NAC, endpoint security, and vulnerability remediation.</li>
+                <li>Implemented and maintained LAN/WAN security architecture, VPN, firewalls, access controls, and NAC capabilities.</li>
+                <li>Supported vulnerability scanning, patch management, hardening, infrastructure onboarding, and threat mitigation activities.</li>
+                <li>Collaborated with IT and security stakeholders to reduce operational disruptions and improve security posture.</li>
+              </ul>
+              <div class="tags compact-tags"><span>Network Security</span><span>VPN</span><span>NAC</span><span>Firewalls</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="dot"></span>
+            <div class="timeline-card">
+              <div class="role-head">
+                <div>
+                  <h3>Senior IT Support / IT Support</h3>
+                  <p>Allianz Saudi Fransi Cooperative Insurance Company</p>
+                </div>
+                <span>Oct 2014 - Jan 2022</span>
+              </div>
+              <ul class="role-points">
+                <li>Built a strong infrastructure and endpoint foundation through technical support, patching, endpoint protection, WSUS, and system hardening.</li>
+                <li>Resolved complex infrastructure, endpoint, and network issues while improving reliability and operational continuity.</li>
+                <li>Administered WSUS and endpoint protection tools to strengthen patching, security compliance, and workstation resilience.</li>
+              </ul>
+              <div class="tags compact-tags"><span>Endpoint</span><span>WSUS</span><span>Infrastructure</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">Credentials</p><h2>Certifications & Professional Development</h2><p>A governance-heavy certification stack supported by insurance knowledge, analytics, project discipline, and technical security foundations.</p></div>
+        <div class="cert-grid">
+          <article class="cert-card reveal"><span>2026</span><h3>CompTIA Cybersecurity Analyst (CySA+)</h3><p>CompTIA</p></article>
+          <article class="cert-card reveal"><span>2026</span><h3>Integrated Risk Management Professional (IRMP)</h3><p>OCEG / GRC Certify</p></article>
+          <article class="cert-card reveal"><span>2026</span><h3>GRC Auditor (GRCA)</h3><p>OCEG / GRC Certify</p></article>
+          <article class="cert-card reveal"><span>2025</span><h3>Insurance Foundation Certificate (IFCE)</h3><p>The Financial Academy</p></article>
+          <article class="cert-card reveal"><span>2025</span><h3>GRC Professional (GRCP)</h3><p>OCEG / GRC Certify</p></article>
+          <article class="cert-card reveal"><span>2019</span><h3>Business Analytics Nanodegree (BAND)</h3><p>Udacity</p></article>
+          <article class="cert-card reveal"><span>Training</span><h3>CCNA 200-301</h3><p>Abadnet Institute for Training</p></article>
+          <article class="cert-card reveal"><span>Training</span><h3>Risk Management Professional (PMI-RMP)</h3><p>Project Champions</p></article>
+          <article class="cert-card reveal"><span>Training</span><h3>Project Management Professional (PMI-PMP)</h3><p>Project Champions</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="projects">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">Impact</p><h2>Selected Cybersecurity Initiatives</h2><p>Practical work that turns frameworks, findings, audits, and committee conversations into actual improvement.</p></div>
+        <div class="project-grid">
+          <article class="project-card reveal"><p>Governance</p><h3>Cybersecurity Governance Program</h3><span>Structured cybersecurity policies, governance charters, committee materials, control ownership, and regulatory-ready documentation across cybersecurity domains.</span><div class="tags"><span>Governance</span><span>Policy</span><span>Committee</span><span>SAMA CSF</span></div></article>
+          <article class="project-card reveal"><p>Risk Reduction</p><h3>VAPT & Vulnerability Remediation Engine</h3><span>Coordinated remediation tracking for Internal/public IPs, web applications, and infrastructure findings with severity-based timelines and executive follow-up.</span><div class="tags"><span>VAPT</span><span>Qualys</span><span>Nessus</span><span>Patch Management</span></div></article>
+          <article class="project-card reveal"><p>Assurance</p><h3>Audit Readiness & Evidence Management</h3><span>Built evidence structures, control documentation, ownership tracking, and audit response material to support internal and external cybersecurity assessments.</span><div class="tags"><span>Audit</span><span>Evidence</span><span>Control Testing</span></div></article>
+          <article class="project-card reveal"><p>Compliance</p><h3>Regulatory Compliance Mapping</h3><span>Mapped cybersecurity documentation and control evidence to Saudi regulatory frameworks and internal audit expectations for stronger readiness and traceability.</span><div class="tags"><span>NCA ECC</span><span>PDPL</span><span>Insurance Authority</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">Expertise</p><h2>Core Competencies</h2><p>A blended skillset across governance, technical control implementation, assurance, remediation oversight, and cybersecurity leadership.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><h3>Governance & Compliance</h3><div class="tags"><span>SAMA CSF</span><span>NCA ECC</span><span>PDPL</span><span>Insurance Authority</span><span>Policy Management</span><span>Control Mapping</span></div></article>
+          <article class="skill-card reveal"><h3>Risk & Assurance</h3><div class="tags"><span>Risk Register</span><span>Risk Treatment</span><span>Gap Assessment</span><span>Control Testing</span><span>Evidence Management</span><span>Third-Party Risk</span></div></article>
+          <article class="skill-card reveal"><h3>Vulnerability & Remediation Governance</h3><div class="tags"><span>VAPT</span><span>Vulnerability Tracking</span><span>Patch Governance</span><span>Remediation Timelines</span><span>Risk-Based Prioritization</span></div></article>
+          <article class="skill-card reveal"><h3>Technical Security</h3><div class="tags"><span>Firewalls</span><span>VPN</span><span>NAC</span><span>Endpoint Security</span><span>Network Security</span><span>Hardening</span><span>IAM/PAM</span><span>MFA</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="cv">
+      <div class="container cv-box reveal">
+        <div><p class="eyebrow">Resume</p><h2>Curriculum Vitae</h2></div>
+        <a href="ABUBAKER_CYSEC.pdf" class="btn primary" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-card reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s connect on cybersecurity</h2>
+        <p>Available for cybersecurity leadership opportunities, discussions, and security transformation conversations.</p>
+        <div class="hero-actions center"><a class="btn primary" href="mailto:ibakerattas@gmail.com">Email Me</a><a class="btn ghost" href="https://www.linkedin.com/in/ibakerattas" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span>© 2026 Abubaker Alattas. All rights reserved.</span><a href="#top" class="top-link">Back to top ↑</a></div></footer>
+  <script>
+document.body.classList.add('js-ready');
+const toggle = document.querySelector('.menu-toggle');
+const links = document.querySelector('.nav-links');
+
+if (toggle && links) {
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  links.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+const revealItems = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('visible'));
+}
+
+
+document.querySelectorAll('.top-link, .home-link').forEach((topControl) => {
+  topControl.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    if (links) links.classList.remove('open');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+  </script>
+</body>
+</html>
